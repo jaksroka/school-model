@@ -28,8 +28,20 @@ public class Teacher extends Worker {
     @Override
     public double getGrossSalary() {
         int seniorityBonusPercent = Math.min(seniority, 20);
-        seniorityBonusPercent = seniorityBonusPercent >= 5 ? seniorityBonusPercent : 0;
+        seniorityBonusPercent = ( seniorityBonusPercent >= 5 ) ? seniorityBonusPercent : 0;
         return super.getGrossSalary() * (1 + (double) seniorityBonusPercent / 100);
+    }
+
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "subject=" + subject +
+                ", seniority=" + seniority +
+                ", grossSalary=" + getGrossSalary() +
+                ", netSalary=" + getNetSalary() +
+                ", mName='" + getName() + '\'' +
+                ", mAge=" + getAge() +
+                '}';
     }
 }
 

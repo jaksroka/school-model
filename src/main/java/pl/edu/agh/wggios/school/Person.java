@@ -1,6 +1,6 @@
 package pl.edu.agh.wggios.school;
 
-public class Person {
+public abstract class Person {
 
     private String mName; //imie i nazwisko
     private int mAge;

@@ -16,5 +16,9 @@ public abstract class Worker extends Person {
         return grossSalary;
     }
 
+    public void setGrossSalary(double grossSalary) {
+        this.grossSalary = grossSalary;
+    }
+
     public abstract double getNetSalary();
 }

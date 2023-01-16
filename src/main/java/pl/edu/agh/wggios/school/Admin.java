@@ -21,4 +21,14 @@ public class Admin extends Worker {
         return getGrossSalary() - incomeTax / 12;
     }
 
+    @Override
+    public String toString() {
+        return "Admin{" +
+                "position='" + position + '\'' +
+                ", grossSalary=" + getGrossSalary() +
+                ", netSalary=" + getNetSalary() +
+                ", mName='" + getName() + '\'' +
+                ", mAge=" + getAge() +
+                '}';
+    }
 }
