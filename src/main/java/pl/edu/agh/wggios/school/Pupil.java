@@ -1,5 +1,7 @@
 package pl.edu.agh.wggios.school;
 
+import java.util.Arrays;
+
 public abstract class Pupil extends Person {
 
     private final static int SUB_NO = 7;
@@ -31,6 +33,7 @@ public abstract class Pupil extends Person {
 
     public void setNote(Subject subj, double note) {
         this.mNotes[subj.ordinal()] = note;
+        calcAve();
     }
 
     public double getNote(Subject subj) {
@@ -47,4 +50,12 @@ public abstract class Pupil extends Person {
 
     abstract public void printOutfit(); //drukowanie ubioru
 
+    @Override
+    public String toString() {
+        return  mID + '\t' +
+                getName() + '\t' +
+                getAve() + '\t' +
+                mClassName + '\t' +
+                getAge() + '\t';
+    }
 }
